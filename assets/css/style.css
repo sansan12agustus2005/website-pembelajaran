@@ -1,0 +1,493 @@
+:root {
+
+  /* ===========================
+     WARNA UTAMA WEBSITE
+  ============================ */
+  --primary: #00a8e8;
+  --primary-dark: #0086b9;
+  --primary-light: #4ed6ff;
+
+  --secondary: #1a2d4b;
+  --secondary-light: #30476d;
+
+  --bg: #eef3ff;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Untuk teks */
+  --text-dark: #1a2d4b;
+  --text-light: #f5f5f5;
+  --text-gray: #555;
+
+  /* ===========================
+     UKURAN FONT
+  ============================ */
+  --font-small: 14px;
+  --font-normal: 16px;
+  --font-medium: 18px;
+  --font-large: 24px;
+  --font-title: 32px;
+
+  /* ===========================
+     RADIUS SUDUT
+  ============================ */
+  --radius-small: 6px;
+  --radius-normal: 12px;
+  --radius-large: 18px;
+  --radius-round: 50%;
+
+  /* ===========================
+     SHADOW / BAYANGAN
+  ============================ */
+  --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 6px 15px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 8px 18px rgba(0, 0, 0, 0.2);
+
+  /* ===========================
+     SPACING / JARAK
+  ============================ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* ===========================
+     TRANSISI
+  ============================ */
+  --transition: 0.3s ease;
+}
+
+
+
+body {
+  margin: 0;
+  padding-top: 70px;
+  /* Geser isi halaman turun */
+  background: #eef3ff;
+  /* Latar belakang halaman */
+  font-family: Arial;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary);
+  padding: 12px 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgb(255, 254, 254);
+}
+
+/* Supaya content tidak ketutup navbar */
+
+/* star navbar */
+
+.logo-img {
+  width: 45px;
+  /* ukuran logo */
+  height: auto;
+  margin-right: 10px;
+  /* jarak dengan teks */
+}
+
+/* Bagian kiri navbar */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  /* lebih rapat */
+  padding: 0px 3%;
+}
+
+
+.navbar-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar-menu li a:hover {
+  color: #111111;
+  background-color: #eef3ff;
+  padding: 12px 12px;
+  border-radius: 10px;
+}
+
+/* ========================== */
+/*     MENU BOX PALING BAWAH  */
+/* ========================== */
+
+.menu-box-container {
+  padding: 40px 20px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* FIX: selalu 3 kolom */
+  gap: 25px;
+  max-width: 900px;
+  /* supaya benar-benar di tengah */
+  margin: auto;
+}
+
+.menu-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.menu-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgb(5, 193, 240);
+}
+
+.menu-box img {
+  width: 110px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.menu-box p {
+  font-size: 17px;
+  font-weight: bold;
+  color: #4b421a;
+}
+
+
+/* end navbar */
+
+/* hero section */
+
+.hero {
+  background-image: url(/assets/images/poto01.jpeg);
+  padding: 50px 20px;     /* teks jadi lebih rapi, bisa disesuaikan */
+  min-height: 80vh;       /* 👉 gambar jadi jauh lebih tinggi */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* global for text stylig */
+
+
+
+.text-center {
+  text-align: center;
+}
+
+.text-light {
+  color: var(--white);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+
+
+/* =============================== */
+/*             HOVER               */
+/* =============================== */
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 8px rgb(231, 235, 237);
+}
+
+/* =============================== */
+/*     AGAR KONTEN TIDAK KETUTUP   */
+/* =============================== */
+body {
+  padding-top: 80px;
+}
+
+/* =============================== */
+/*         RESPONSIVE (HP)         */
+/* =============================== */
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  body {
+    padding-top: 120px;
+  }
+}
+
+/* NAVBAR FIXED */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #00a8e8;
+  /* WARNA BIRU */
+  padding: 12px 25px;
+  position: fixed;
+  /* Nempel di atas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgb(255, 254, 254);
+}
+
+/* Supaya content tidak ketutup navbar */
+body {
+  margin: 0;
+  padding-top: 70px;
+  /* Geser isi halaman turun */
+  background: #eef3ff;
+  /* Latar belakang halaman */
+  font-family: Arial;
+}
+
+/* Bagian kiri navbar */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Menu */
+
+/* EFEK HOVER PADA TEKS JUDUL */
+h1:hover {
+  color: #0b52f8;
+  /* warna berubah */
+  transform: scale(1.08);
+  /* membesar sedikit */
+  text-shadow: 0 5px 12px rgb(13, 35, 230);
+}
+
+/* GRID TIM */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* KOTAK CARD */
+.team-card {
+  background: #e8e9eb;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgb(38, 39, 38);
+  transition: 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* HOVER CARD */
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgb(6, 153, 232);
+}
+
+/* FOTO DI CARD */
+.team-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+/* FOTO ZOOM SAAT HOVER */
+.team-card:hover img {
+  transform: scale(1.08);
+}
+
+/* NAMA */
+.team-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #000;
+  transition: 0.3s;
+}
+
+/* NAMA NAIK SAAT HOVER */
+.team-card:hover h3 {
+  transform: translateY(-3px);
+  color: rgb(12, 180, 231);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 kolom tetap */
+  gap: 25px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.team-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  height: 100%;
+  /* membuat tinggi box sama */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-card img {
+  width: 100%;
+  height: 230px;
+  /* tinggi gambar dibuat sama */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.team-card h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  /* jarak antar kolom */
+  row-gap: 50px;
+  /* jarak antar baris (lebih besar) */
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+/* LATAR BELAKANG HALAMAN FULL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fbf9f9;
+}
+
+/* NAVBAR FIXED */
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 130px auto 40px;
+  /* jarak 130px agar tidak tertutup navbar */
+  padding: 20px;
+}
+
+/* Judul */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0dcdef;
+  font-size: 50px;
+  font-weight: 800;
+  transition: 0.3s ease-in-out;
+  text-shadow: 0 3px 6px rgb(0, 17, 249);
+  cursor: pointer;
+}
+
+h1:hover {
+  color: #13b1ea;
+  transform: scale(1.08);
+  text-shadow: 0 5px 12px rgb(8, 45, 231);
+}
+
+/* GRID CARD */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 50px;
+}
+
+/* CARD ANGGOTA */
+.team-card {
+  background: #0fceeb;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(5, 76, 255, 0.15);
+  transition: 0.3s;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(44, 96, 227);
+}
+
+/* GAMBAR ANGGOTA */
+.team-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.team-card:hover img {
+  transform: scale(1.08);
+}
+
+/* NAMA */
+.team-card h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 15px;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.team-card:hover h3 {
+  color: #e6e8e9;
+  transform: translateY(-3px);
+}
+

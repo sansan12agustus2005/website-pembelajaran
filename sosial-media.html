@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sosial Media Sekolah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/js/navbar-menu.js">
+
+<style>
+
+/* ---------------- GLOBAL ---------------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f9fc;
+}
+
+/* ---------------- HEADER SOSIAL MEDIA ---------------- */
+#lokasi h1 {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(45, 43, 43);
+  margin: 0;
+  padding: 60px 20px;
+  font-weight: bold;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+  background: url('bg-sekolah.jpg');
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* ---------------- CONTAINER ---------------- */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Layout grid untuk card */
+.map-video {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* ---------------- CARD VIDEO/IG ---------------- */
+.video-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 22px rgb(4, 172, 234);
+}
+
+.video-card h3 {
+  text-align: center;
+  font-size: 20px;
+  color: #1a2d4b;
+  margin-bottom: 15px;
+}
+
+.video-wrap img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.video-wrap img:hover {
+  opacity: 0.85;
+}
+
+
+
+</style>
+<div id="navbar-component"></div>
+
+</head>
+<body>
+
+<section id="lokasi" class="lokasi">
+
+  <h1>Sosial Media</h1>
+  <div class="container">
+    <div class="map-video">
+      <div class="video-card">
+        <div class="video-wrap">
+          <a href="https://www.youtube.com/@maplusan-nurcilawu6858" target="_blank">
+            <img src="assets/images/y02.jpg" alt="YouTube MAS PLUS ANN-NUR">
+          </a>
+        </div>
+      </div>
+      <div class="video-card">
+       
+        <div class="video-wrap">
+          <a href="https://www.instagram.com/ponpesannur.cilawu?igsh=MTlsODE2dHlvMnV4aA==" target="_blank">
+            <img src="assets/images/ig.jpg" alt="Instagram MAS PLUS ANN-NUR">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<script src="assets/js/navbar-menu.js"></script>
+</body>
+</html>

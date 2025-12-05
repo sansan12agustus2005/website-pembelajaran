@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web Pembelajaran MAS PLUS AN-NUR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+ <div id="navbar-component"></div>
+
+  <div class="main-content">
+    <!-- Konten halaman kamu disini -->
+  </div>
+  <!-- Hero -->
+  <section id="beranda" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content text-light">
+      <h1 class="text-center">WEB PEMBELAJARAN </h1>
+      <p class="text-center">MEDIA PEMBELAJARAN EKONOMI MAS PLUS AN-NUR </p>
+    </div>
+  </section>
+
+  <!-- Welcome / Intro -->
+  <div class="container">
+    <div class="welcome-left text-primary">
+      <h1 class="text-center">Welcome!</h1>
+      <h3 class="text-center">Selamat Datang di web pembelajaran ini. Tetap semangat dalam menuntut ilmu agar kelak
+        kalian menjadi siswa
+        yang hebat dan sukses.</h3>
+
+      <!-- Card quick links -->
+      <!-- <div class="quick-links">
+          <a href="kelas.html" class="btn">Lihat Daftar Kelas</a>
+        </div> -->
+    </div>
+
+    <script src="website.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+        function cariKelas() {
+          const q = document.getElementById("searchInput").value.toLowerCase().trim();
+
+          if (q.includes("kelas x") || q === "x") {
+            window.location.href = "kelas.html#kelas X";
+          }
+          else if (q.includes("kelas xi") || q === "xi") {
+            window.location.href = "kelas.html#kelas XI";
+          }
+          else if (q.includes("kelas xii ips") || q.includes("xii ips") || q.includes("xii ips")) {
+            window.location.href = "kelas.html#kelas XII IPS";
+          }
+          else if (q.includes("lab") || q.includes("laboratorium") || q.includes("praktikum")) {
+            window.location.href = "kelas.html#lab";
+          }
+          else {
+            alert("Kelas tidak ditemukan! Coba ketik: kelas X, kelas XI, kelas XII IPS.");
+          }
+        }
+
+        document.getElementById("searchBtn").addEventListener("click", cariKelas);
+
+        document.getElementById("searchInput").addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            cariKelas();
+          }
+        });
+
+      });
+    </script>
+    <!-- ======================= -->
+    <!--  MENU BOX PALING BAWAH  -->
+    <!-- ======================= -->
+    <section class="menu-box-container">
+      <div class="menu-grid" id="menus">
+      </div>
+    </section>
+
+<script>
+  const menus = [
+  {
+    title: "Beranda",
+    href: "index.html",
+    image: "assets/images/LOGO.png"
+  },
+  {
+    title: "Profile Sekolah",
+    href: "profilsekolah.html",
+    image: "assets/images/LOGO.png"
+  },
+  {
+    title: "Tujuan Web",
+    href: "tujuan.html",
+    image: "assets/images/LOGO.png"
+  },
+  {
+    title: "Profil Pembuat",
+    href: "profilpembuat.html",
+    image: "assets/images/LOGO.png"
+  },
+  {
+    title: "Absensi & Evaluasi",
+    href: "kelas-evaluasi.html",
+    image: "assets/images/LOGO.png"
+  },
+  {
+    title: "Materi & Quis",
+    href: "materi_quies.htm",
+    image: "assets/images/LOGO.png"
+  }
+]
+
+const menuComponent = document.getElementById("menus")
+
+menuComponent.innerHTML = menus.map(menu => `
+  <a href="${menu.href}" class="menu-box">
+    <img src="${menu.image}" alt="${menu.title}">
+    <p>${menu.title}</p>
+  </a>
+`).join("")
+</script>
+  <!-- <script src="assets/js/navbar-menu.js"></script> -->
+<script src="assets/js/navbar-menu.js"></script>
+</body>
+
+</html>

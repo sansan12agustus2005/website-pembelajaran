@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tujuan Web Pembelajaran</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .judul-tujuan {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 120px;
+      /* TURUN JAUH */
+      margin-bottom: 30px;
+      color: #1a2d4b;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .judul-tujuan:hover {
+      color: #00a8e8;
+      transform: scale(1.05);
+    }
+
+    body {
+      margin: 0;
+      background: #eef3ff;
+      font-family: Arial;
+    }
+
+
+    .logo-text {
+      font-size: 22px;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* ===================== BOX GRID ===================== */
+    .container-grid {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    /* ===================== BOX STYLE ===================== */
+    .info-box {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+      border-top: 5px solid #007bff;
+      min-height: 350px;
+      /* SAMA UKURAN */
+    }
+
+    .info-box:hover {
+      box-shadow: 0 12px 28px rgba(0, 162, 255, 0.978);
+      transform: translateY(-8px);
+      border-top-color: #0080ff;
+    }
+
+    /* ===================== H2 HOVER ===================== */
+    h2 {
+      text-align: center;
+      color: #055ce9;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    h2:hover {
+      color: #00a8e8;
+      transform: scale(1.05);
+    }
+
+    /* LIST STYLE */
+    ol li {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    /* ===================== VIDEO BOX ===================== */
+    .video-box {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      border-top: 5px solid #007bff;
+      transition: 0.3s ease;
+      border-top-color: #0080ff;
+    }
+
+    .video-box:hover {
+      box-shadow: 0 12px 28px rgba(0, 162, 255, 0.35);
+      transform: translateY(-8px);
+      border-top-color: #0080ff;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+    }
+
+    .logo-img {
+      width: 45px;
+      /* ukuran logo */
+      height: auto;
+      margin-right: 10px;
+      /* jarak dengan teks */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <div id="navbar-component"></div>
+  <h1 class="judul-tujuan">Tujuan Web Pembelajaran</h1>
+
+  <!-- ===================== 3 BOX TUJUAN ===================== -->
+  <div class="container-grid">
+
+    <!-- BOX 1 -->
+    <div class="info-box">
+      <h2>Tujuan Web Pembelajaran</h2>
+      <ol>
+        <li>Mempermudah akses materi</li>
+        <li>Menyediakan materi terstruktur</li>
+        <li>Meningkatkan efektivitas belajar</li>
+        <li>Mendukung pembelajaran mandiri</li>
+        <li>Memfasilitasi interaksi pengajar & siswa</li>
+        <li>Memberikan evaluasi cepat & akurat</li>
+        <li>Meningkatkan minat belajar</li>
+        <li>Mendukung pembelajaran jarak jauh</li>
+        <li>Menyediakan arsip pembelajaran</li>
+      </ol>
+    </div>
+
+    <!-- BOX 2 -->
+    <div class="info-box">
+      <h2>Tujuan Video Pembelajaran</h2>
+      <ol>
+        <li>Memudahkan siswa memahami materi</li>
+        <li>Pembelajaran lebih menarik</li>
+        <li>Visualisasi konsep sulit</li>
+        <li>Bisa ditonton kapan saja</li>
+        <li>Cocok untuk gaya belajar visual & auditori</li>
+        <li>Pembelajaran interaktif</li>
+        <li>Menghemat waktu mengajar</li>
+        <li>Meningkatkan kualitas pembelajaran online</li>
+        <li>Memberikan tutorial jelas</li>
+        <li>Memperkuat daya ingat</li>
+      </ol>
+    </div>
+
+    <!-- BOX 3 -->
+    <div class="info-box">
+      <h2>Tujuan Materi Ekonomi</h2>
+      <ol>
+        <li>Memahami cara kerja ekonomi</li>
+        <li>Mengetahui fungsi uang, pasar, dan harga</li>
+        <li>Mengelola sumber daya secara efektif</li>
+        <li>Melatih pola pikir kritis</li>
+        <li>Mempersiapkan diri untuk dunia usaha</li>
+        <li>Mengetahui faktor kebutuhan & keinginan</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <div class="video-box">
+    <h2>Video Pembelajaran</h2>
+
+    <iframe src="https://drive.google.com/file/d/1-p9rt5-U96Mg4m1eh4tTQzowzHTN_7BT/preview" allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+<script src="assets/js/navbar-menu.js"></script>
+</body>
+
+</html>
