@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web Pembelajaran Sistem Informasi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background:  #01acef;
+      color: #fff;
+      padding: 12px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-left img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .navbar-left .logo-text {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .navbar a.active,
+    .navbar a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      margin-top: 90px;
+    }
+
+    .kelas {
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #01acef;
+    }
+
+    /* 🔍 SEARCH BAR */
+    .search-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .search-wrap input[type="search"] {
+      width: 100%;
+      max-width: 500px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .search-wrap button {
+      background-color: #01acef;
+      color: rgb(15, 14, 14);
+      border: none;
+      border-radius: 8px;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .search-wrap button:hover {
+      background-color: #07f2ac;
+    }
+
+    /* 🎓 KARTU KELAS */
+    .kelas-container {
+      display: flex;
+      flex-wrap: wrap;  
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .kelas-card {
+      background: #11b9f6;
+      color: #fff;
+      padding: 20px;
+      width: 260px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s;
+      box-shadow: 0 8px 20px #07f2ac(0, 0, 0, 0.15);
+    }
+
+    .kelas-card h3 {
+      margin-bottom: 8px;
+      color: #101010;
+    }
+
+    .kelas-card:hover {
+      transform: translateY(-6px);
+      background-color: rgb(6, 250, 254);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+    }
+
+    footer {
+      background:  #01acef(21, 21, 21);
+      color: #fcfcfc;
+      text-align: center;
+      padding: 15px;
+      margin-top: 60px;
+    }
+  </style> 
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="LOGO.png" alt="Logo Kampus" class="logo-img">
+      <span class="logo-text">Web Pembelajaran Sistem Informasi</span>
+    </div>
+    <ul>
+      <li><a href="website.html" class="active">Beranda</a></li>
+      <li><a href="kelas.html">Kelas</a></li>
+      <li><a href="repository.html">Repository</a></li>
+    </ul>
+  </header>
+<header class="navbar"> 
+  <div class="navbar-left">
+    <img src="LOGO.png" alt="Logo Kampus" class="logo-img">
+    <div class="logo-text">WEB MAS PLUS ANN-NUR</div>
+  </div>
+
+</header>
+
+
+
+  <main>
+    <section class="kelas">
+      <div class="container">
+        <h2>Pilih Kelas</h2>
+
+        <!-- 🔍 Search bar -->
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Cari kelas ( Kelas X, Kelas XI, Kelas XII IPS...)" />
+          <button id="btnCari">Cari</button>
+        </div>
+
+        <!-- 🎓 Daftar Kelas -->
+        <div id="kelasContainer" class="kelas-container">
+          <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://118.98.228.242/Media/Dokumen/5cdd6510b646044330d686c8/7c9710249ccf7401fa52e135b8049e9c.pdf&ved=2ahUKEwi_yKHBq82QAxWCwjgGHZZkKn0QFnoECCkQAQ&usg=AOvVaw2jdlSx7AKZCHpEsjGtGNvq" class="kelas-card" 
+          id="kelas-X" data-keywords="kelas a si dasar jaringan perangkat keras">
+            <h3>Kelas X</h3>
+            <p>Materi Dasar Ekonomi.</p>
+          </a>
+
+          <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=http://118.98.228.242/Media/Dokumen/5cdd6510b646044330d686c8/95b7b07d485ae9afb2036cff21e01a8c.pdf&ved=2ahUKEwiWgpzlq82QAxVWXmwGHT93Fa0QFnoECGkQAQ&usg=AOvVaw3lDS7nnAujfELr86putnYf" class="kelas-card" 
+          id="kelas-XI" data-keywords="kelas b si konfigurasi lan server keamanan">
+            <h3>Kelas XI</h3>
+            <p>Materi Dasar Ekonomi.</p>
+          </a>
+
+          <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://penerbitcmedia.com/download1/BSE/SMA/Kelas-XII/IPS/Ekonomi_BS_KLS_XII.pdf&ved=2ahUKEwiT_aqQrM2QAxVv4zgGHYJpGcsQFnoECFAQAQ&usg=AOvVaw017Q79BP389G1XbjuZGXow" class="kelas-card" 
+          id="kelas-XII-IPS" data-keywords="kelas c si proyek cloud troubleshooting">
+            <h3>Kelas XII IPS</h3>
+            <p>Materi Dasar Ekonomi.</p>
+          </a>
+
+          <!-- <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://penerbitcmedia.com/download1/BSE/SMA/Kelas-XII/IPS/Ekonomi_BS_KLS_XII.pdf&ved=2ahUKEwiT_aqQrM2QAxVv4zgGHYJpGcsQFnoECFAQAQ&usg=AOvVaw017Q79BP389G1XbjuZGXow" class="kelas-card" id="lab" data-keywords="laboratorium praktikum mikrotik">
+            <h3>Data Pelajaran Sokolah MAS PLUS ANN-NUR</h3>
+            <p></p>
+          </a> -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2025 WEB PEMBELAJARAN MAS PLUS ANN-NUR</div>
+    </div>
+  </footer>
+
+  <!-- JS Pencarian -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const btnCari = document.getElementById("btnCari");
+      const inputCari = document.getElementById("searchInput");
+      const cards = document.querySelectorAll(".kelas-card");   
+
+      function cariKelas() {
+        const keyword = inputCari.value.toLowerCase().trim();
+        let ditemukan = false;
+
+        cards.forEach(card => {
+          const data = card.getAttribute("data-keywords").toLowerCase();
+          const teks = card.textContent.toLowerCase();
+
+          if (data.includes(keyword) || teks.includes(keyword)) {
+            card.scrollIntoView({ behavior: "smooth", block: "center" });
+            card.style.outline = "4px solid #ffbf00";
+            setTimeout(() => card.style.outline = "none", 2000);
+            ditemukan = true;
+          }
+        });
+
+        if (!ditemukan) {
+          alert("Kelas tidak ditemukan! Coba ketik: Kelas X MAS PLUS AN-NUR, Kelas XI MAS PLUS AN-NUR, Kelas XII IPS MAS AN-NUR, atau Laboratorium.");
+        }
+      }
+
+      btnCari.addEventListener("click", cariKelas);
+      inputCari.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") cariKelas();
+      });
+    });
+  </script>
+</body>
+</html>

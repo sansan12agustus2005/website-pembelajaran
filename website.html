@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web Pembelajaran MAS PLUS AN-NUR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head> 
+<style>
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #00a8e8;       
+  padding: 12px 25px;
+  position: fixed;           
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgb(255, 254, 254);
+}
+
+/* Supaya content tidak ketutup navbar */
+body {
+  margin: 0;
+  padding-top: 70px;    /* Geser isi halaman turun */
+  background: #eef3ff;   /* Latar belakang halaman */
+  font-family: Arial;
+}
+.logo-img {
+  width: 45px;        /* ukuran logo */
+  height: auto;
+  margin-right: 10px; /* jarak dengan teks */
+}
+
+/* Bagian kiri navbar */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 10px;        /* lebih rapat */
+  padding: 0px;
+}
+
+
+.navbar-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar-menu li a:hover {
+  color: #111111;
+}
+/* ========================== */
+/*     MENU BOX PALING BAWAH  */
+/* ========================== */
+
+.menu-box-container {
+  padding: 40px 20px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* FIX: selalu 3 kolom */
+  gap: 25px;
+  max-width: 900px; /* supaya benar-benar di tengah */
+  margin: auto;
+}
+
+.menu-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.menu-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgb(5, 193, 240);
+}
+
+.menu-box img {
+  width: 110px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.menu-box p {
+  font-size: 17px;
+  font-weight: bold;
+  color: #1a2d4b;
+}
+
+
+</style>
+
+  
+<body>
+<div class="navbar">
+  <div class="navbar-left">
+  <img src="logo.png" class="logo-img" alt="Logo Sekolah">
+  <span class="logo-text">WEB PEMBELAJARAN</span>
+</div>
+
+
+  <ul class="navbar-menu">
+    <li><a href="website.html">Beranda</a></li>
+    <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+    <li><a href="tujuan.html">Tujuan Web</a></li>
+    <li><a href="profilpembuat.html">Profil Pembuat</a></li>
+     <li><a href="kelas-evaluasi.html">Absensi & Evaluasi</a></li>
+    <li><a href="materi_quies.html">Materi&Quis</a></li>
+    <li><a href="sosial-media.html">Sosial Media</a></li>
+  </ul>
+</div>
+
+<div class="main-content">
+  <!-- Konten halaman kamu disini -->
+</div>
+  <!-- Hero -->
+  <section id="beranda" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>WEB PEMBELAJARAN  </h1>
+      <p>MEDIA PEMBELAJARAN EKONOMI MAS PLUS AN-NUR </p>
+    </div>
+  </section>
+
+  <!-- Welcome / Intro -->
+  <section class="welcome">
+    <div class="container">
+      <div class="welcome-left">
+        <h1>Welcome!</h1>
+        <h3>Selamat Datang di web pembelajaran ini. Tetap semangat dalam menuntut ilmu agar kelak kalian menjadi siswa yang hebat dan sukses.</h3>
+      </div>
+
+      <div class="welcome-right">
+        <img src="poto01.jpeg" alt="Ilustrasi guru" id="welcome-img">
+      </div>
+    </div>
+  </section>
+
+ <!-- Petunjuk Penggunaan -->
+<!-- <section id="petunjuk" class="petunjuk">
+  <div class="container">
+    <h2>🧭 Petunjuk Penggunaan</h2>
+    <p>Berikut langkah-langkah untuk menngakses materi dan mengumpulkan materi!!!</p>
+
+    <div class="guide-grid">
+      <article class="guide-card">
+        <div class="guide-img">
+          <img src="https://www.instagram.com/p/DQe7x76k9S_/?igsh=czIxaHhuMmRjaDho" alt="Langkah 1">
+          <span class="step-label">Langkah 1</span>
+        </div>
+        <h3><a href="https://www.canva.com/design/DAG4dio8CUE/rqfnoX_Xpnh44_P0tZ0Ztg/view?utm_content=DAG4dio8CUE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9be9395e6f" 
+          target="_blank" rel="noopener">Cara Mengakses Materi</a></h3>
+        <p>Langkah-langkah membuka materi, (MAS PLUS AN-NUR CILAWU).</p>
+      </article>
+
+      <article class="guide-card">
+        <div class="guide-img">
+          <img src="" alt="Langkah 2">
+          <span class="step-label">Langkah 2</span>
+        </div>
+        <h3><a href="https://www.canva.com/design/DAG5kV3QfHw/OyO5V-VPjq_n67sFRxv8Xg/edit?ui=eyJBIjp7fX0" target="_blank" rel="noopener">Mengumpulkan Tugas</a></h3>
+        <p>Langkah-Langkah mengumpulkan tugas. <br>( MAS PLUS AN-NUR CILAWU )</p>
+      </article>
+
+      <article class="guide-card">
+        <div class="guide-img">
+          <img src="petunjuk3.jpg" alt="Langkah 3">
+          <span class="step-label">Langkah 3</span>
+        </div>
+        <h3><a href="https://share.google/images/ZaIHyDYs6Q0ak3KzO" target="_blank" rel="noopener">Masukan dan Saran</a></h3>
+        <p>Cara bergabung dan bertanya di forum siswa atau kelas online. <br>(MAS PLUS AN-NUR CILAWU)</p>
+      </article>
+    </div>
+  </div>
+</section> -->
+<!-- Profil Sekolah -->
+<!-- <section id="profil" class="profil">
+  <div class="container">
+    <h2>🏫 Profil Sekolah</h2>
+    <div class="profil-grid"> -->
+      <!-- <div class="profil-card">
+        <h3>Visi</h3>
+        <p>Terwujudnya Siswa Generasi Milenial Qur'ani yang Berilmu dan Berakhlakul Karimah.</p>
+      </div>
+      <div class="profil-card">
+        <h3>Misi</h3>
+        <ul>
+          <li>Melaksanakan KBM sesuai Kurikulum Kemenag berbasis Pesantren.</li>
+          <li>Menanamkan sikap disiplin dan tanggung jawab terhadap lingkungan.</li>
+          <li>Mengikutsertakan peran aktif lingkungan pesantren.</li>
+        </ul>
+      </div>
+
+      <div class="profil-card">
+        <h3>Moto</h3>
+        <p><em>"Berilmu, Berakhlak, Berprestasi"</em></p>
+      </div>
+
+      <div class="profil-card">
+        <h3>Kebijakan Sekolah</h3>
+        <p>Fokus pada peningkatan mutu pembelajaran dan penguatan karakter muslim/muslimah yang berlandaskan Al-Qur'an dan Sunnah.</p>
+      </div>
+
+      <div class="profil-card">
+        <h3>Karakter Utama MAS PLUS ANN-NUR</h3>
+        <ol>
+          <li>Beriman dan bertakwa</li>
+          <li>Cendekia muslim</li>
+          <li>Mandiri</li>
+          <li>Berakhlakul Karimah</li>
+          <!-- <li>Tangguh</li> -->
+        <!-- </ol>
+      </div>
+    </div>
+  </div>
+</section> --> 
+  <!-- Maps dan Video -->
+  <!-- <section id="lokasi" class="lokasi">
+    <div class="container">
+      <div class="map-video">
+  
+        KOTAK MAP
+        <div class="map-card">
+          <h3>Alamat & Peta Lokasi</h3>
+           Ganti src iframe ini dengan link embed dari Google Maps -->
+          <!-- <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.0557388328903!2d107.91100227499983!3d-7.268716692738254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68af38356301eb%3A0xe9e68f80815c0f5!2sMA%20Plus%20An-Nur%20Cilawu!5e1!3m2!1sid!2sid!4v1761725999705!5m2!1sid!2sid"
+             width="100%"
+             height="350"
+             style="border:0;" 
+             allowfullscreen=""
+             loading="lazy">
+            </iframe>
+        </div> - -->
+   
+        <!-- KOTAK VIDEO -->
+        <!-- <div class="video-card">
+          <h3>Profil Sekolah (MAS PLUS ANN-NUR)</h3>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/o4x14Zc2k_U" 
+              width="100%"
+              height="350"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+        
+  
+      </div>
+    </div>
+  </section> -->
+   
+      <!-- <footer>
+    <div class="container footer-inner">
+      <div class="copyright-text">© 2025 Web MAS PLUS ANN-NUR</div>
+      <div></div>
+    </div>
+  </footer> -->
+
+  <script src="website.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  function cariKelas() {
+    const q = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    if (q.includes("kelas x") || q === "x") {
+      window.location.href = "kelas.html#kelas X";
+    }
+    else if (q.includes("kelas xi") || q === "xi") {
+      window.location.href = "kelas.html#kelas XI";
+    }
+    else if (q.includes("kelas xii ips") || q.includes("xii ips") || q.includes("xii ips")) {
+      window.location.href = "kelas.html#kelas XII IPS";
+    }
+    else if (q.includes("lab") || q.includes("laboratorium") || q.includes("praktikum")) {
+      window.location.href = "kelas.html#lab";
+    }
+    else {
+      alert("Kelas tidak ditemukan! Coba ketik: kelas X, kelas XI, kelas XII IPS.");
+    }
+  }
+
+  document.getElementById("searchBtn").addEventListener("click", cariKelas);
+
+  document.getElementById("searchInput").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      cariKelas();
+    }
+  });
+
+});
+</script>
+<!-- ======================= -->
+<!--  MENU BOX PALING BAWAH  -->
+<!-- ======================= -->
+<section class="menu-box-container">
+  <div class="menu-grid">
+
+    <a href="profilsekolah.html" class="menu-box">
+      <img src="LOGO.png" alt="Profil Sekolah">
+      <p>Profil Sekolah</p>
+    </a>
+
+    <a href="tujuan.html" class="menu-box">
+      <img src="LOGO.png" alt="Tujuan">
+      <p>Tujuan <br>Web Pembelajaran</p>
+    </a>
+
+    <a href="profilpembuat.html" class="menu-box">
+      <img src="LOGO.png" alt="Profil Pembuat">
+      <p>Profil Pembuat</p>
+    </a>
+
+    <a href="kelas-evaluasi.html" class="menu-box">
+      <img src="LOGO.png" alt="Kelas Evaluasi">
+      <p>Kelas-Evaluasi</p>
+    </a>
+
+    <a href="materi_quies.html" class="menu-box">
+      <img src="LOGO.png" alt="Materi Kuis">
+      <p>Materi-Kuis</p>
+    </a>
+
+    <a href="sosial-media.html" class="menu-box">
+      <img src="LOGO.png" alt="Sosial Media">
+      <p>Sosial Media</p>
+    </a>
+
+  </div>
+</section>
+
+
+
+</body>
+</html>
