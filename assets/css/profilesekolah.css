@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
     /* ======================= */
     /*       HEADER FOTO       */
@@ -6,7 +5,7 @@
 
     .header {
       position: relative;
-      background-image: url(/web-pembelajaran/assets/images/poto01.jpeg);
+      background-image: url(../assets/images/poto01.jpeg);
       padding: 150px 20px;
       width: 100%;
       background-size: cover;
@@ -24,19 +23,55 @@
       z-index: 1;
     } */
 
-    .header h1 {
-      position: relative;
-      z-index: 2;
-      font-size: 65px;
-      font-weight: 900;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.9);
-      transition: 0.3s ease;
-    }
+    .header {
+  background-image: url("../images/poto01.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
 
-    .header h1:hover {
-      transform: scale(1.07);
-      color: #f9cb00;
-    }
+
+.header {
+  /* Hapus kode Flexbox yang lama */
+  
+  /* 1. Mengatur Perataan Teks ke Tengah (Horizontal) */
+  text-align: center; 
+
+  /* 2. Mengatur posisi vertikal agar 'agak di atas' */
+  /* Kurangi nilai padding atas. Semakin kecil nilainya, semakin tinggi posisinya. */
+  padding-top: 20px; 
+  
+  /* Tambahkan atau pastikan properti height ada jika Anda ingin mengontrol ketinggian area header */
+  height: 30vh; /* Contoh ketinggian area */
+}
+
+.header h1 {
+  position: relative;
+  z-index: 2;
+  
+  /* UBAH NILAI font-size INI */
+  font-size: 90px; /* Diperbesar dari 65px menjadi 90px (Anda bisa coba nilai lain, misal 100px) */
+  
+  font-weight: 600;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.9);
+  transition: 0.3s ease;
+  
+  /* Pastikan text-align: center; ada di .header agar tetap di tengah */
+  text-align: center; 
+}
+
+.header h1:hover {
+  color: #006aff; 
+  transform: scale(1.07);
+  text-shadow: 0 0 15px #0080ff, 0 3px 8px rgba(0,0,0,0.9);
+}
 
     /* ======================= */
     /*       INFO BOX GRID     */
@@ -100,212 +135,28 @@
 }
   
 
-    .container {
+.container {
       max-width: 1100px;
       margin: 40px auto;
       padding: 20px;
     }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #fbfbfb;
-      font-size: 40px;
-      font-weight: 700;
-      transition: 0.3s ease-in-out;
-      cursor: pointer;
-    }
-
-    /* Hover teks judul */
-    h1:hover {
-      color: #14cdf2;
-      transform: scale(1.05);
-    }
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    /* BOX */
-.box {
-  background: #ffffff;
-  padding: 25px;
-  width: 800px;              /* <<< LEBIH LEBAR */
-  text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
+h1:hover {
+  color: #f7f9fc;
+  /* warna berubah */
+  transform: scale(1.08);
+  /* membesar sedikit */
+  text-shadow: 0 5px 12px rgb(228, 230, 245);
 }
 
-/* HOVER BOX */
-.box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgb(4, 200, 240);
-}
-
-/* TOMBOL */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: #00a8e8;
-  color: #ffffff;
-  padding: 10px 18px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-/* HOVER TOMBOL */
-.btn:hover {
-  background: #ffffff;
-  color: #00a8e8;
-  border: 2px solid #00a8e8;
-}
-=======
-
-    /* ======================= */
-    /*       HEADER FOTO       */
-    /* ======================= */
-
-    .header {
-      position: relative;
-      background-image: url(/assets/images/poto01.jpeg);
-      padding: 150px 20px;
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      color: white;
-    }
-
-    /* .header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.45);
-      z-index: 1;
-    } */
-
-    .header h1 {
-      position: relative;
-      z-index: 2;
-      font-size: 65px;
-      font-weight: 900;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.9);
-      transition: 0.3s ease;
-    }
-
-    .header h1:hover {
-      transform: scale(1.07);
-      color: #f9cb00;
-    }
-
-    /* ======================= */
-    /*       INFO BOX GRID     */
-    /* ======================= */
-
-    .info-wrapper {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-
-    .info-box {
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 25px;
-      border-top: 5px solid #2455a2;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      transition: 0.3s;
-    }
-
-    .info-box:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgb(4, 161, 239);
-      border-top-color: #dbe0e1;
-    }
-
-    .info-box h3 {
-      text-align: center;
-      color: #0b3c5d;
-      margin-bottom: 15px;
-      font-size: 22px;
-    }
-    .info-box h4 {
-  text-align: center;
-}
-
-    .info-box p,
-    .info-box li {
-      line-height: 1.6;
-      color: #333;
-      font-size: 16px;
-    }
-  
- .map-box {
-  max-width: 800px;        
-  margin: 40px auto;       
-  background: #ffffff;     
+/* GRID TIM */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
   padding: 20px;
-  border-radius: 15px;     
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: 0.3s ease;     /* penting untuk animasi */
 }
-
-/* HOVER EFFECT */
-.map-box:hover {
-  transform: translateY(-5px);       /* naik sedikit */
-  box-shadow: 0 8px 25px rgb(5, 175, 232);  /* bayangan lebih tebal */
-}
-  
-
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #fbfbfb;
-      font-size: 40px;
-      font-weight: 700;
-      transition: 0.3s ease-in-out;
-      cursor: pointer;
-    }
-
-    /* Hover teks judul */
-    h1:hover {
-      color: #14cdf2;
-      transform: scale(1.05);
-    }
 
     
-
-
-
-
-
-
-
-
-
-
-
     /* BOX */
 .box {
   background: #ffffff;
@@ -342,4 +193,3 @@
   color: #00a8e8;
   border: 2px solid #00a8e8;
 }
->>>>>>> 1973c2c8288b0861689e758ee58580016215ac12
